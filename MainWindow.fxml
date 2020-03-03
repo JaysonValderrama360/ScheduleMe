@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="327.0" prefWidth="252.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="c195project.MainWindowController">
+   <children>
+      <Button id="customersBtn" layoutX="31.0" layoutY="38.0" mnemonicParsing="false" onAction="#CustomersBtnClick" prefHeight="25.0" prefWidth="190.0" text="Customers" />
+      <Button id="appointmentsBtn" layoutX="32.0" layoutY="93.0" mnemonicParsing="false" onAction="#AppointmentsBtnClick" prefHeight="25.0" prefWidth="190.0" text="Appointments" />
+      <Button id="calendarBtn" layoutX="32.0" layoutY="147.0" mnemonicParsing="false" onAction="#CalendarBtnClick" prefHeight="25.0" prefWidth="190.0" text="Calendar" />
+      <Button id="reportsBtn" layoutX="31.0" layoutY="202.0" mnemonicParsing="false" onAction="#ReportsBtnClick" prefHeight="25.0" prefWidth="190.0" text="Reports" />
+      <Button id="logFileBtn" layoutX="30.0" layoutY="258.0" mnemonicParsing="false" onAction="#LogFileBtnClick" prefHeight="25.0" prefWidth="190.0" text="Log File" />
+      <Label fx:id="userNameLabel" layoutX="182.0" layoutY="6.0" text="UserName" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="c195project.AppointmentsController">
+   <children>
+      <Label fx:id="userNameLabel" layoutX="14.0" layoutY="378.0" text="User: " />
+      <Label layoutX="15.0" layoutY="15.0" text="Customer: " />
+      <ComboBox fx:id="customerComboBox" layoutX="73.0" layoutY="11.0" onAction="#customerSelect" prefHeight="25.0" prefWidth="155.0" />
+      <VBox layoutX="15.0" layoutY="52.0" prefHeight="200.0" prefWidth="100.0" spacing="19.0">
+         <children>
+            <Label text="Title" />
+            <Label text="Description" />
+            <Label text="Location" />
+            <Label text="Contact" />
+            <Label text="Type" />
+            <Label text="URL" />
+            <Label text="Date" />
+            <Label text="Start/End" />
+         </children>
+      </VBox>
+      <VBox layoutX="115.0" layoutY="50.0" prefHeight="200.0" prefWidth="182.0" spacing="11.0">
+         <children>
+            <TextField fx:id="titleTxtBox" />
+            <TextField fx:id="descriptionTxtBox" />
+            <TextField fx:id="locationTxtBox" />
+            <TextField fx:id="contactTxtBox" />
+            <TextField fx:id="typeTxtBox" />
+            <TextField fx:id="urlTxtBox" />
+            <DatePicker fx:id="dateDatePicker" prefHeight="25.0" prefWidth="182.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ChoiceBox fx:id="startTimeChoiceBox" prefHeight="25.0" prefWidth="74.0">
+                     <HBox.margin>
+                        <Insets right="34.0" />
+                     </HBox.margin>
+                  </ChoiceBox>
+                  <ChoiceBox fx:id="endTimeChoiceBox" prefHeight="25.0" prefWidth="74.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Button fx:id="editButton" layoutX="512.0" layoutY="353.0" mnemonicParsing="false" onAction="#editAppt" prefHeight="25.0" prefWidth="74.0" text="Edit" />
+      <TableView fx:id="apptTableView" layoutX="300.0" layoutY="36.0" prefHeight="314.0" prefWidth="298.0">
+        <columns>
+          <TableColumn fx:id="dateTableColumn" prefWidth="91.0" text="Date" />
+          <TableColumn fx:id="typeTableColumn" prefWidth="83.0" text="Type" />
+            <TableColumn fx:id="descriptionTableColumn" prefWidth="123.0" text="Description" />
+        </columns>
+      </TableView>
+      <Button fx:id="submitBtn" layoutX="223.0" layoutY="338.0" mnemonicParsing="false" onAction="#submitAppt" prefHeight="25.0" prefWidth="74.0" text="Submit" />
+      <Button fx:id="deleteBtn" layoutX="428.0" layoutY="353.0" mnemonicParsing="false" onAction="#deleteAppt" prefHeight="25.0" prefWidth="74.0" text="Delete" />
+   </children>
+</AnchorPane>

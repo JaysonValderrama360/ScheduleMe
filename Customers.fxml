@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="419.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="c195project.CustomersController">
+   <children>
+      <TableView id="customerTable" fx:id="customerTable" layoutX="281.0" layoutY="14.0" prefHeight="374.0" prefWidth="312.0">
+        <columns>
+          <TableColumn id="customerIDCol" fx:id="customerIDCol" editable="false" prefWidth="83.0" text="Customer ID" />
+          <TableColumn id="customerNameCol" fx:id="customerNameCol" editable="false" prefWidth="227.0" text="Name" />
+        </columns>
+      </TableView>
+      <TabPane layoutX="7.0" layoutY="15.0" prefHeight="374.0" prefWidth="273.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="New Customer">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="338.0" prefWidth="274.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="26.0" text="Name" />
+                        <TextField id="newNameTxtBox" fx:id="newNameTxtBox" layoutX="90.0" layoutY="22.0" prefHeight="25.0" prefWidth="172.0" />
+                        <TextField id="newAddressTxtBox" fx:id="newAddressTxtBox" layoutX="90.0" layoutY="57.0" prefHeight="25.0" prefWidth="172.0" />
+                        <CheckBox id="newActiveChkBox" fx:id="newActiveChkBox" layoutX="90.0" layoutY="272.0" mnemonicParsing="false" text="Active" />
+                        <Label layoutX="14.0" layoutY="61.0" text="Address" />
+                        <Button id="addCustomerBtn" fx:id="addCustomerBtn" layoutX="166.0" layoutY="306.0" mnemonicParsing="false" onAction="#addCustomerBtnHandler" text="Add Customer" />
+                        <TextField id="newAddress2TxtBox" fx:id="newAddress2TxtBox" layoutX="90.0" layoutY="91.0" prefHeight="25.0" prefWidth="172.0" />
+                        <Label layoutX="14.0" layoutY="95.0" text="Address 2" />
+                        <TextField id="newPhoneTxtBox" fx:id="newPhoneTxtBox" layoutX="90.0" layoutY="127.0" prefHeight="25.0" prefWidth="172.0" />
+                        <Label layoutX="14.0" layoutY="131.0" text="Phone" />
+                        <TextField id="newPostalCodeTxtBox" fx:id="newPostalCodeTxtBox" layoutX="90.0" layoutY="160.0" prefHeight="25.0" prefWidth="172.0" />
+                        <Label layoutX="14.0" layoutY="164.0" text="Postal Code" />
+                        <Label layoutX="20.0" layoutY="243.0" text="City" />
+                        <Label layoutX="14.0" layoutY="204.0" text="Country" />
+                        <ComboBox fx:id="newCountryComboBox" layoutX="91.0" layoutY="200.0" onAction="#newCountryComboBoxHandler" prefHeight="25.0" prefWidth="170.0" />
+                        <ComboBox fx:id="newCityComboBox" layoutX="91.0" layoutY="239.0" prefHeight="25.0" prefWidth="171.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Update Customer">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="22.0" layoutY="23.0" text="Customer ID" />
+                        <Label layoutX="22.0" layoutY="61.0" text="Name" />
+                        <Label layoutX="23.0" layoutY="98.0" text="Address" />
+                        <CheckBox id="updateActiveChkBox" fx:id="updateActiveChkBox" layoutX="95.0" layoutY="289.0" mnemonicParsing="false" text="Active" />
+                        <TextField id="updateIDTxtBox" fx:id="updateIDTxtBox" editable="false" layoutX="110.0" layoutY="19.0" />
+                        <TextField id="updateNameTxtBox" fx:id="updateNameTxtBox" layoutX="110.0" layoutY="57.0" />
+                        <TextField id="updateAddressTxtBox" fx:id="updateAddressTxtBox" layoutX="110.0" layoutY="94.0" />
+                        <Button id="updateCustomerBtn" fx:id="updateCustomerBtn" layoutX="149.0" layoutY="306.0" mnemonicParsing="false" onAction="#updateCustomerBtnHandler" text="Update Customer" />
+                        <TextField id="updateAddress2TxtBox" fx:id="updateAddress2TxtBox" layoutX="110.0" layoutY="126.0" />
+                        <TextField id="updatePhoneTxtBox" fx:id="updatePhoneTxtBox" layoutX="110.0" layoutY="160.0" />
+                        <TextField id="updatePostalCodeTxtBox" fx:id="updatePostalCodeTxtBox" layoutX="110.0" layoutY="192.0" />
+                        <Label layoutX="24.0" layoutY="130.0" text="Address 2" />
+                        <Label layoutX="24.0" layoutY="164.0" text="Phone" />
+                        <Label layoutX="24.0" layoutY="196.0" text="Postal Code" />
+                        <Label layoutX="28.0" layoutY="261.0" text="City" />
+                        <Label layoutX="23.0" layoutY="230.0" text="Country" />
+                        <ComboBox fx:id="updateCountryComboBox" layoutX="110.0" layoutY="226.0" onAction="#updateCountryComboBoxHandler" prefWidth="150.0" />
+                        <ComboBox fx:id="updateCityComboBox" layoutX="110.0" layoutY="257.0" prefWidth="150.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button id="deleteCustomerBtn" fx:id="deleteCustomerBtn" layoutX="488.0" layoutY="390.0" mnemonicParsing="false" onAction="#deleteCustomerBtnHandler" text="Delete Customer" />
+      <Label fx:id="userNameLabel" layoutX="14.0" layoutY="394.0" text="User: " />
+   </children>
+</AnchorPane>

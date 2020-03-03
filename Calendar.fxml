@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="c195project.CalendarController">
+   <children>
+      <TabPane prefHeight="380.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Week">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="343.0" prefWidth="600.0">
+                     <children>
+                        <ListView fx:id="weekListView" layoutX="8.0" layoutY="1.0" prefHeight="350.0" prefWidth="585.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Month">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="353.0" prefWidth="600.0">
+                     <children>
+                        <ListView fx:id="monthListView" layoutX="6.0" layoutY="2.0" prefHeight="348.0" prefWidth="588.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Label fx:id="userNameLabel" layoutX="14.0" layoutY="378.0" text="User: " />
+   </children>
+</AnchorPane>
